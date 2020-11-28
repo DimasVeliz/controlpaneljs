@@ -1,4 +1,7 @@
 import React from 'react';
+import DropDownCard from '../../DropDownCard/DropDownCard';
+import NumInputContainer from '../../NumInputContainer/NumInputContainer';
+import RadioButtonsCards from '../../RadioButtonsCards/RadioButtonsCards';
 
 const panelJetson = (props) => {
 	return (
@@ -11,66 +14,14 @@ const panelJetson = (props) => {
 					<form>
 						<div className="form-group">
 							<div className="col justify-content-around">
-								<label>Configuración</label>
-								<select className="form-control">
-									<optgroup label="Configuraciones">
-										<option value="12" selected="">
-											Config. 01
-										</option>
-										<option value="13">Config. 02</option>
-										<option value="14">Config. 03</option>
-									</optgroup>
-								</select>
-								<label>Weights</label>
-								<select className="form-control">
-									<optgroup label="ANNs">
-										<option value="12" selected="">
-											ANN. 01
-										</option>
-										<option value="13">ANN. 02</option>
-										<option value="14">ANN. 03</option>
-									</optgroup>
-								</select>
-								<label>LabelSet</label>
-								<select className="form-control">
-									<optgroup label="Etiquetas">
-										<option value="12" selected="">
-											Etiqueta. 01
-										</option>
-										<option value="13">Etiqueta. 02</option>
-										<option value="14">Etiqueta. 03</option>
-									</optgroup>
-								</select>
+								<DropDownCard/>
+								<DropDownCard/>
+								<DropDownCard/>
+								
 								<hr />
 							</div>
-							<div className="col">
-								<label>Profundidad de la cola de progreso</label>
-								<input className="form-control" type="number" />
-								<label>Profundidad de la cola de fallos</label>
-								<input className="form-control" type="number" />
-								<hr />
-							</div>
-							<div className="col">
-								<label>Modelo de Actuación</label>
-								<div className="custom-control custom-radio">
-									<input className="custom-control-input" name="jetsonCtrl" type="radio" id="formCheck-6" />
-									<label className="custom-control-label" for="formCheck-6">
-										Video
-									</label>
-								</div>
-								<div className="custom-control custom-radio">
-									<input className="custom-control-input" name="jetsonCtrl" type="radio" id="formCheck-5" />
-									<label className="custom-control-label" for="formCheck-5">
-										Streaming
-									</label>
-								</div>
-								<div className="custom-control custom-radio">
-									<input className="custom-control-input" name="jetsonCtrl" type="radio" id="formCheck-4" />
-									<label className="custom-control-label" for="formCheck-4">
-										Manual
-									</label>
-								</div>
-							</div>
+							<NumInputContainer/>
+							<RadioButtonsCards/>
 						</div>
 					</form>
 				</div>
