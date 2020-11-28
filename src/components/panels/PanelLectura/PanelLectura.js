@@ -1,6 +1,6 @@
 import React from 'react';
 import TextInputContainer from '../../TextInputContainer/TextInputContainer';
-import RadioButtonsCards from '../../RadioButtonsCards/RadioButtonsCards'
+import RadioButton from '../../RadioButton/RadioButton'
 
 const panelLectura = (props) => {
 	return (
@@ -12,9 +12,16 @@ const panelLectura = (props) => {
 				<div className="card-body">
 					<form>
 						<div className="form-group">
-						<TextInputContainer/>
-						<TextInputContainer/>
-						<TextInputContainer/>
+							<div>
+								<TextInputContainer
+									label={"Sensor de Presion 01"} />
+							</div><div>
+								<TextInputContainer
+									label={"Presion Max."} />
+							</div><div>
+								<TextInputContainer
+									label={"Bloqueo de Piston 01"} />
+							</div>
 
 							<div className="form-check">
 								<input className="form-check-input" type="checkbox" id="formCheck-7" />
@@ -22,9 +29,37 @@ const panelLectura = (props) => {
 									Bloqueado
 								</label>
 							</div>
-							<TextInputContainer/>
-							<RadioButtonsCards/>
-							<RadioButtonsCards/>
+							<hr />
+							<div>
+								<TextInputContainer
+									label={"Sensor de Proximidad"} />
+							</div>
+							<hr />
+							<div className="col">
+								<label>Finales de Carrera</label>
+								<RadioButton 
+								label={"FC1"}
+								groupName={"b"}/>
+								<RadioButton 
+								label={"FC2"}
+								groupName={"b"}/>
+								
+
+							</div>
+							<hr />
+							<div className="col">
+								<label>Lanzamiento preparado</label>
+								<RadioButton 
+								label={"Si"}
+								groupName={"c"}/>
+								<RadioButton 
+								label={"Cargando"}
+								groupName={"c"}/>
+								<RadioButton 
+								label={"Faltan Datos"}
+								groupName={"c"}/>
+
+							</div>
 						</div>
 					</form>
 				</div>

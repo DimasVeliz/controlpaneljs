@@ -2,7 +2,7 @@ import '../../components/panels/Panels.css';
 
 import React from 'react'
 
-const SlideBar = () => {
+const SlideBar = (props) => {
 
     return (
         <div>

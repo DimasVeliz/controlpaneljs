@@ -2,16 +2,16 @@ import React from 'react'
 import '../panels/Panels.css'
 
 
-const TextInputContainer = () => {
+const TextInputContainer = (props) => {
 
     return (
         <div>
-            <label>Sensor de presió 01</label>
-                                <input className="form-control" type="text" placeholder="xx,xx bar" />
-                                
+            <label>{props.label}</label>
+            <input className="form-control" type="text" placeholder="xx,xx bar" />
+
 
         </div>
-							
+
     );
 }
 

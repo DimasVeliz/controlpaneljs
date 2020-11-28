@@ -2,24 +2,28 @@ import React from 'react'
 import '../../components/panels/Panels.css';
 import TextInputContainer from '../TextInputContainer/TextInputContainer'
 
-const CardRawContainer = () => {
+const CardRawContainer = (props) => {
 
     return (
 
         <div className="form-row">
             <div className="col">
-            <TextInputContainer/>
+            <TextInputContainer 
+            label={props.label}/>
 
-            <TextInputContainer/>
+            <TextInputContainer
+            label={props.label}/>
 
             </div>
             <div className="col">
-            <TextInputContainer/>
+            <TextInputContainer
+            label={props.label}/>
 
-            <TextInputContainer/>
+            <TextInputContainer
+            label={props.label}/>
 
             </div>
-        </div>
+        </div> 
 
 
     );

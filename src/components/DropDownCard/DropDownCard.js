@@ -1,23 +1,22 @@
 import React from 'react'
 import '../panels/Panels.css'
+import _uniqueId from 'lodash/uniqueId';
+const DropDownCard = (props) => {
 
-const DropDownCard= ()=>{
-   return(
+	let elements= props.values.map( (v,index)=>(<option key={_uniqueId("prefix-")} value="12" selected="">{v}</option>));
+	
+	return (
 
-                                <div>
-<label>Configuración</label>
-								<select className="form-control">
-									<optgroup label="Configuraciones">
-										<option value="12" selected="">
-											Config. 01
-										</option>
-										<option value="13">Config. 02</option>
-										<option value="14">Config. 03</option>
-									</optgroup>
-								</select>
+		<div>
+			<label>{props.label}</label>
+			<select className="form-control">
+				<optgroup label={props.label}>
+					{elements}
+				</optgroup>
+			</select>
 
-                                </div>
-   ); 
+		</div>
+	);
 }
 
 export default DropDownCard;

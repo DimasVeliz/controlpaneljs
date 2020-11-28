@@ -1,7 +1,7 @@
 import '../../components/panels/Panels.css';
 import React from 'react'
 
-const SwitchButtons = () => {
+const SwitchButtons = (props) => {
 
     return  (
             <div>

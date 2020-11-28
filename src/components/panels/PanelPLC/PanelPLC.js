@@ -1,7 +1,7 @@
 import React from 'react';
-import CardRawContainer from '../../CardRawContainer/CardRawContainer';
 import SlideBar from '../../SlideBar/SildeBar';
 import SwitchButtons from '../../SwitchButtons/SwitchButtons';
+import TextInputContainer from '../../TextInputContainer/TextInputContainer';
 import '../Panels.css';
 
 const panelPLC = (props) => {
@@ -14,18 +14,59 @@ const panelPLC = (props) => {
 				<div className="card-body">
 					<form>
 						<div className="form-group">
-							<SlideBar/>
+							<SlideBar />
 
-							<CardRawContainer/>
-							
+							<div className="form-row">
+								<div className="col">
+									<div>
+										<TextInputContainer
+										label={"Pasos a 1,60mm"}/>
+									</div>
+									<div>
+										<TextInputContainer
+										label={"Pasos a 1,80mm"}/>
+									</div>
+								</div>
+								<div className="col">
+									<div>
+										<TextInputContainer
+										label={"Pasos a 1,70mm"}/>
+									</div>
+									<div>
+										<TextInputContainer
+										label={"Pasos a 1,90mm"}/>
+									</div>
+								</div>
+							</div>
 							<hr />
-							
-							<SlideBar/>
-							<CardRawContainer/>
+
+							<SlideBar />
+							<div className="form-row">
+								<div className="col">
+									<div>
+										<TextInputContainer
+										label={"Presion Piston"}/>
+									</div>
+									<div>
+										<TextInputContainer
+										label={"Bloqueo Min."}/>
+									</div>
+								</div>
+								<div className="col">
+									<div>
+										<TextInputContainer
+										label={"Carrera de Vaciado"}/>
+									</div>
+									<div>
+										<TextInputContainer
+										label={"Bloqueo Max."}/>
+									</div>
+								</div>
+							</div>
 							<hr />
-							
-							<SwitchButtons/>
-							
+
+							<SwitchButtons />
+
 							<hr />
 							<button className="btn btn-danger btn-block text-center" type="submit">
 								Saltar
