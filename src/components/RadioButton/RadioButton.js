@@ -4,7 +4,7 @@ import _uniqueId from 'lodash/uniqueId';
 
 
 const RadioButton = (props) => {
-let id= _uniqueId;
+let id= _uniqueId("radix-");
     return (
         <div className="custom-control custom-radio">
             <input className="custom-control-input" name={props.groupName} type="radio" id={id} />
