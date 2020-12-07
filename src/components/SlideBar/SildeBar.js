@@ -1,15 +1,26 @@
 import '../../components/panels/Panels.css';
-
-import React from 'react'
+import RangeSlider from 'react-bootstrap-range-slider';
+import _uniqueId from 'lodash/uniqueId';
+import React from 'react';
 
 const SlideBar = (props) => {
-
+    const [ value, setValue ] = React.useState(0);
+    let id = _uniqueId("slidx-");
     return (
         <div>
-            <label>Salto del Jugador 01</label>
-            <div id="slidecontainer">
-                <input type="range" class="slider" min="0" max="800" step="200" id="customRange2" onChange={() => console.log(document.getElementById("customRange2").value)} />
-
+            <label>{props.label}</label>
+            <div >
+            <RangeSlider
+            min={props.min}
+            max={props.max}
+            tooltip="auto"
+            tooltipPlacement="top"
+            step={props.step}
+            id={id}
+            value={value}
+            variant="danger"
+            onChange={e => setValue(e.target.value)}
+            />
             </div>
         </div>
     );

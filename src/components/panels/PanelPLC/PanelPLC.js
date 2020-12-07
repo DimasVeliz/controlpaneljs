@@ -14,7 +14,12 @@ const panelPLC = (props) => {
 				<div className="card-body">
 					<form>
 						<div className="form-group">
-							<SlideBar />
+							<SlideBar 
+							label={"Altura del Jugador 01"}
+							min={150}
+							max={190}
+							step={10}
+							/>
 
 							<div className="form-row">
 								<div className="col">
@@ -40,7 +45,12 @@ const panelPLC = (props) => {
 							</div>
 							<hr />
 
-							<SlideBar />
+							<SlideBar 
+							label={"Salto del Jugador 01"}
+							min={200}
+							max={800}
+							step={200}
+							/>
 							<div className="form-row">
 								<div className="col">
 									<div>
